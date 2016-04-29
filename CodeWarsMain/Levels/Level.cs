@@ -19,6 +19,7 @@ namespace CodeWarsMain.Levels
     {
         private GameState gameState;
         private string backgroundFilePath;
+        private List<Interfaces.IDrawable> drawableObjects;
 
         public Level(string backgroundFilePath, GameState gameState)
         {
@@ -49,7 +50,23 @@ namespace CodeWarsMain.Levels
             }
         }
 
+        public List<Interfaces.IDrawable> DrawableObjects {
+            get
+            {
+                return this.drawableObjects;
+            }
+            private set
+            {
+                this.drawableObjects = value;
+            }
+        }
+
         public int backgroundImageWidth { get; set; }
+
+        public void AddGameObject(Interfaces.IDrawable gameObject)
+        {
+            this.DrawableObjects.Add(gameObject);
+        }
 
         public abstract void Update();
         public abstract void Load();

@@ -39,6 +39,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CodeWarsGame.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
+    <Compile Include="Levels\LevelOne.cs" />
+    <Compile Include="Models\Button.cs" />
     <Compile Include="Resources\Constants.cs" />
     <Compile Include="Enums\GameState.cs" />
     <Compile Include="Levels\Level.cs" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/home/Documents/Visual Studio 2013/Projects/CodeWars/CodeWarsMain/Content/Images/Backgrounds/CodeWizard.png</SourceFile>
+  <SourceFile>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/CodeWizard.png</SourceFile>
   <SourceTime>2016-04-26T17:31:31.5319631+03:00</SourceTime>
-  <DestFile>C:/Users/home/Documents/Visual Studio 2013/Projects/CodeWars/CodeWarsMain/Content/bin/Windows/Images/Backgrounds/CodeWizard.xnb</DestFile>
-  <DestTime>2016-04-26T19:11:33.1552363+03:00</DestTime>
+  <DestFile>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/bin/Windows/Images/Backgrounds/CodeWizard.xnb</DestFile>
+  <DestTime>2016-04-29T13:52:52.496903+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T09:36:08+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

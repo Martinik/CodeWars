@@ -3,10 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using CodeWarsMain.Enums;
 using CodeWarsMain.Levels;
-using CodeWarsMain;
-using System.Collections;
-using System;
 using System.Collections.Generic;
+using CodeWarsMain.Models;
 
 namespace CodeWarsMain
 {
@@ -15,15 +13,20 @@ namespace CodeWarsMain
     /// </summary>
     public class CodeWarsGame : Game
     {
-        GraphicsDeviceManager graphics;
+        public static GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GameState currentGameState = GameState.MainMenu;
         List<Level> gameLevels;
+
         int screenWidth = Constants.ScreenWidth;
         int screenHeight = Constants.ScreenHeight;
 
 
-        //ainMenu mainMenu = new MainMenu();
+        //Buttons
+        Button startGameButton;
+
+
+        //MainMenu mainMenu = new MainMenu();
 
         public CodeWarsGame()
         {
@@ -40,6 +43,8 @@ namespace CodeWarsMain
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
+            
 
             gameLevels = new List<Level>()
             {
@@ -67,6 +72,9 @@ namespace CodeWarsMain
 
             IsMouseVisible = true;
 
+            //Buttons
+            startGameButton = new Button(Content.Load<Texture2D>("Images//Backgrounds//play_button"), Constants.StartButtonSize, Constants.StartButtonLocation);
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -89,7 +97,21 @@ namespace CodeWarsMain
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            MouseState mouse = Mouse.GetState();
+
             // TODO: Add your update logic here
+
+            switch (currentGameState)
+            {
+                case GameState.MainMenu:
+                    startGameButton.Update(mouse);
+                    break;
+                case GameState.LevelOne:
+                    break;
+
+            }
+            
+            
 
             base.Update(gameTime);
         }
@@ -102,16 +124,16 @@ namespace CodeWarsMain
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+
             Texture2D background = Content.Load<Texture2D>((gameLevels.Find(x => x.GameState == currentGameState).BackgroundFilePath));
+            spriteBatch.Draw(background, new Rectangle(0, 0, screenWidth, screenHeight), Color.White);
 
             int tempWidth = background.Width;
 
-            if (currentGameState == GameState.MainMenu)
-            {
-                tempWidth = screenWidth;
-            }
+           
 
-            spriteBatch.Draw(background, new Rectangle(0, 0, tempWidth, screenHeight), Color.White);
+  
+            startGameButton.Draw(spriteBatch);
             spriteBatch.End();
 
             // TODO: Add your drawing code here

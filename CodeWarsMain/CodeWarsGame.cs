@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using CodeWarsMain.Enums;
 using CodeWarsMain.Levels;
 using System.Collections.Generic;
+using System.Threading;
 using CodeWarsMain.Models;
 
 namespace CodeWarsMain
@@ -20,7 +21,7 @@ namespace CodeWarsMain
 
         int screenWidth = Constants.ScreenWidth;
         int screenHeight = Constants.ScreenHeight;
-
+        private bool isPaused = false;
 
         //Buttons
         Button startGameButton;
@@ -73,7 +74,8 @@ namespace CodeWarsMain
             IsMouseVisible = true;
 
             //Buttons
-            startGameButton = new Button(Content.Load<Texture2D>("Images//Backgrounds//play_button"), Constants.StartButtonSize, Constants.StartButtonLocation);
+            startGameButton = new Button(Content.Load<Texture2D>("Images//Backgrounds//play_button"), 
+                Constants.StartButtonSize, Constants.StartButtonLocation);
 
             // TODO: use this.Content to load your game content here
         }
@@ -94,26 +96,32 @@ namespace CodeWarsMain
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            MouseState mouse = Mouse.GetState();
-
-            // TODO: Add your update logic here
-
-            switch (currentGameState)
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+                    Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
-                case GameState.MainMenu:
-                    startGameButton.Update(mouse);
-                    break;
-                case GameState.LevelOne:
-                    break;
-
+                isPaused = !isPaused;
             }
-            
-            
+            if (!isPaused)
+            {
 
-            base.Update(gameTime);
+                MouseState mouse = Mouse.GetState();
+
+                // TODO: Add your update logic here
+
+                switch (currentGameState)
+                {
+                    case GameState.MainMenu:
+                        startGameButton.Update(mouse);
+                        break;
+                    case GameState.LevelOne:
+                        break;
+
+                }
+
+
+
+                base.Update(gameTime);
+            }
         }
 
         /// <summary>

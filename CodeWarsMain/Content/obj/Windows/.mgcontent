@@ -4,17 +4,17 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/Begin.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/CodeJedi.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/codespace.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/codespaceCode.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/CodeWizard.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/MainMenuBackground.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/minimal-class.jpg</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/play_button.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jedi3.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jedi4.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jediLeft.png</File>
-    <File>C:/Users/home/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jediRight.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/Begin.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/CodeJedi.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/codespace.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/codespaceCode.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/CodeWizard.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/MainMenuBackground.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/minimal-class.jpg</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/play_button.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jedi3.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jedi4.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jediLeft.png</File>
+    <File>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Sprites/jediRight.png</File>
   </SourceFiles>
 </SourceFileCollection>

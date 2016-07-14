@@ -19,8 +19,8 @@ namespace CodeWarsMain
         GameState currentGameState = GameState.MainMenu;
         List<Level> gameLevels;
 
-        int screenWidth = Constants.ScreenWidth;
-        int screenHeight = Constants.ScreenHeight;
+        readonly int ScreenWidth = Constants.ScreenWidth;
+        readonly int ScreenHeight = Constants.ScreenHeight;
 
         private bool isPaused = false;
         private bool pauseWasPressed = false;
@@ -28,7 +28,6 @@ namespace CodeWarsMain
 
         //Buttons
         Button startGameButton;
-
 
         //MainMenu mainMenu = new MainMenu();
 
@@ -48,13 +47,11 @@ namespace CodeWarsMain
         {
             // TODO: Add your initialization logic here
 
-            
-
             gameLevels = new List<Level>()
             {
-                new MainMenu()
+                new MainMenu(),
+                new LevelOne()
             };
-
 
             base.Initialize();
         }
@@ -69,8 +66,8 @@ namespace CodeWarsMain
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //Screen
-            graphics.PreferredBackBufferWidth = screenWidth;
-            graphics.PreferredBackBufferHeight = screenHeight;
+            graphics.PreferredBackBufferWidth = ScreenWidth;
+            graphics.PreferredBackBufferHeight = ScreenHeight;
             //graphics.IsFullScreen = true;
             graphics.ApplyChanges();
 
@@ -108,10 +105,14 @@ namespace CodeWarsMain
             }
             if (!isPaused)
             {
-
                 MouseState mouse = Mouse.GetState();
 
                 // TODO: Add your update logic here
+
+                if (startGameButton.IsPressed)
+                {
+                    currentGameState = GameState.LevelOne;
+                }
 
                 switch (currentGameState)
                 {
@@ -120,10 +121,7 @@ namespace CodeWarsMain
                         break;
                     case GameState.LevelOne:
                         break;
-
                 }
-
-
 
                 base.Update(gameTime);
             }
@@ -141,12 +139,9 @@ namespace CodeWarsMain
             spriteBatch.Begin();
 
             Texture2D background = Content.Load<Texture2D>((gameLevels.Find(x => x.GameState == currentGameState).BackgroundFilePath));
-            spriteBatch.Draw(background, new Rectangle(0, 0, screenWidth, screenHeight), Color.White);
+            spriteBatch.Draw(background, new Rectangle(0, 0, ScreenWidth, ScreenHeight), Color.White);
 
             int tempWidth = background.Width;
-
-           
-
   
             startGameButton.Draw(spriteBatch);
             spriteBatch.End();

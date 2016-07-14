@@ -9,7 +9,7 @@ namespace CodeWarsMain.Levels
 {
     public class LevelOne : Level
     {
-        public LevelOne(string backgroundFilePath, GameState gameState) : base(backgroundFilePath, gameState)
+        public LevelOne() : base(Constants.MainMenuBackgroudImageFilePath, GameState.LevelOne)
         {
         }
 

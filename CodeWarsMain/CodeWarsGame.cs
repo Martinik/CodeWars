@@ -21,7 +21,10 @@ namespace CodeWarsMain
 
         int screenWidth = Constants.ScreenWidth;
         int screenHeight = Constants.ScreenHeight;
+
         private bool isPaused = false;
+        private bool pauseWasPressed = false;
+        private bool pauseIsPressed = false;
 
         //Buttons
         Button startGameButton;
@@ -96,8 +99,10 @@ namespace CodeWarsMain
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                    Keyboard.GetState().IsKeyDown(Keys.Escape))
+            pauseIsPressed = GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+                             Keyboard.GetState().IsKeyDown(Keys.Escape);
+
+            if (pauseIsPressed && !pauseWasPressed)
             {
                 isPaused = !isPaused;
             }
@@ -122,6 +127,8 @@ namespace CodeWarsMain
 
                 base.Update(gameTime);
             }
+
+            pauseWasPressed = pauseIsPressed;
         }
 
         /// <summary>

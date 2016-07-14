@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/MainMenuBackground.png</SourceFile>
-  <SourceTime>2016-07-14T15:49:03.0298044+03:00</SourceTime>
-  <DestFile>C:/Users/Dracovallis/Documents/GitHub/CodeWars/CodeWarsMain/Content/bin/Windows/Images/Backgrounds/MainMenuBackground.xnb</DestFile>
-  <DestTime>2016-07-14T15:51:28.0506845+03:00</DestTime>
+  <SourceFile>C:/Users/Y50/Documents/GitHub/CodeWars/CodeWarsMain/Content/Images/Backgrounds/MainMenuBackground.png</SourceFile>
+  <SourceTime>2016-07-14T15:58:45.4773714+03:00</SourceTime>
+  <DestFile>C:/Users/Y50/Documents/GitHub/CodeWars/CodeWarsMain/Content/bin/Windows/Images/Backgrounds/MainMenuBackground.xnb</DestFile>
+  <DestTime>2016-07-14T16:10:00.646931+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T09:36:08+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

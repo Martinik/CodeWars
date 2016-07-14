@@ -13,6 +13,7 @@ namespace CodeWarsMain
         
 
         public static string MainMenuBackgroudImageFilePath = "Images\\Backgrounds\\MainMenuBackground";
+        public static string LevelOneBackgroudImageFilePath = "Images\\Backgrounds\\minimal-class";
 
         public static int ScreenWidth = 800;
         public static int ScreenHeight = 600;

@@ -52,7 +52,8 @@ namespace CodeWarsMain
 
             gameLevels = new List<Level>()
             {
-                new MainMenu()
+                new MainMenu(),
+                new LevelOne()
             };
 
 
@@ -108,7 +109,10 @@ namespace CodeWarsMain
             }
             if (!isPaused)
             {
-
+                if (startGameButton.IsPressed)
+                {
+                    currentGameState = GameState.LevelOne;
+                }
                 MouseState mouse = Mouse.GetState();
 
                 // TODO: Add your update logic here
